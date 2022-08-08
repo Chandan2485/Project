@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+}
+h1 ,h2,div{
+    padding-bottom: 30px;
+}
+.btn3,.btn2{
+    margin-left: 20px;
+}
+h2{
+    font-size: 100px;
+}

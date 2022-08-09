@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: rgb(167, 106, 224);
+    height: 100vh;
+    width: 250px;
+    position: absolute;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px 20px 0 20px;
+}
+.menu{
+    padding: 20px;
+}
+.menu div{
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgb(216, 41, 41);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu div:hover{
+    background-color: aqua;
+    color:black
+}
+.btn{
+    outline: none;
+    background-color: rgb(167, 106, 224);
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.btn:hover{
+  color: red;
+}
+.logo h1{
+    color: aqua;
+    /* margin-right: 50px; */
+}
+.menu_btn{
+   cursor: pointer;
+   margin: 10px;
+   padding: 5px 10px;
+   background-color: rgb(12, 245, 245);
+   border: 0;
+   border-radius: 5px;
+   font-weight: bold;
+}
+
+.hidemenubar{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}

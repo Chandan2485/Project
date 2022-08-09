@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+h1{
+    display: inline-block;
+    padding:0 20px;
+    border-left: 50px solid black;
+    border-right: 50px solid black;
+}
+article{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+section{
+    width: 60%;
+}
+.qna{
+    cursor: pointer;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.ans{
+    text-align: justify;
+    padding: 10px;
+    font-weight: bold;
+}
+.ans_toggle{
+    height: 0;
+    overflow: hidden;
+}

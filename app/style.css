@@ -126,7 +126,6 @@ border-radius: 5px;
 
 
 
-
 .task_input_box{
     font-size: 30px;
     margin: 20px;
@@ -145,13 +144,10 @@ border-radius: 5px;
    background-color: blueviolet;
    color: white;
 }
-
 /* ----------------------------------------------------- */
-
 .task_list{
     display: flex;
     flex-wrap: wrap;
-   
 }
 .tasks{
     display: flex;
@@ -178,7 +174,6 @@ border-radius: 5px;
      overflow: hidden;
 }
 /* ------------------------------------------------------- */
-
 .footer{
     display: flex;
     justify-content: space-between;
@@ -190,7 +185,6 @@ border-radius: 5px;
     font-size: 17px;
     font-weight: bold;
     margin-right: 7px;
-   
 }
 .lock_item{
     height: 0;

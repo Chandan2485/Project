@@ -190,3 +190,27 @@ border-radius: 5px;
     height: 0;
     overflow: hidden;
 }
+/* --------------------------------------------------------search */
+.search{
+    display: flex;
+    justify-content: center;
+}
+
+#search{
+    font-size: 15px;
+    padding:5px 10px;
+    border: 0;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+}
+.search_btn{
+    padding:0 10px;
+    border-radius:0 10px 10px 0;
+    font-weight: bold;
+    background-color: aqua;
+}
+#option{
+    border: none;
+    outline: none;
+    font-weight: bold;
+}

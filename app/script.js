@@ -192,3 +192,58 @@ function lockUnlock(e) {
         z = (z > 3) ? 0 : z
     }
 }
+// -------------------------------------------------------search---------
+
+const search_text=document.getElementById("search")
+const option_text=document.getElementById("option")
+const search_btn=document.querySelector(".search_btn")
+
+search_btn.addEventListener("click",searchItem)
+function searchItem(){
+    let search=search_text.value
+    if(option_text.value == "All"){
+        task_list.innerHTML = ''
+        let item_no=0
+        for(let a=0;a<task_text_arr.length;a++){
+            if(task_text_arr[a] == search){
+                task_list.innerHTML += ` 
+                <div class="tasks">
+                <div>
+                    <div class="color"></div>
+                    <div class="task_field">${task_text_arr[a]}</div>
+                </div>
+                <div class="footer">
+                        <div class="modifiy lock_item">
+                           <i class="fa-solid fa-check" id="complete" ></i>
+                           <i class="fa-solid fa-trash-can" id="remove"></i>
+                           <i class="fa-solid fa-pen-to-square" id="edit"></i>
+                           <i class="fa-solid fa-square color1" id="color"></i>
+                        </div>
+                        <i class="fa-solid fa-lock " id="lock"></i>
+                    
+                </div>
+        </div>`
+        document.querySelectorAll(".color")[item_no].style.backgroundColor = `${task_color_arr[a]}`
+        document.querySelectorAll(".color1")[item_no].style.color = `${task_color_arr[a]}`
+        item_no++
+            }
+        }
+    }
+    else{
+        com_item=0
+        task_list.innerHTML = ''
+        for(let a=0;a<com_text_arr.length;a++){
+            if(com_text_arr[a] == search){
+                task_list.innerHTML += ` 
+                <div class="tasks">
+                <div>
+                    <div class="color"></div>
+                    <div class="task_field">${com_text_arr[a]}</div>
+                </div>
+        </div>`
+        document.querySelectorAll(".color")[com_item].style.backgroundColor = `${com_color_arr[a]}`
+        com_item++
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+img{
+    margin: 100px 0 5px 0;
+    height: 200px;
+    width: 350px;
+}
+.times{
+    display: inline-block;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: blueviolet;
+    color: white;
+}
+.colon{
+    margin-bottom: 5px;
+    font-size: 20px;
+}

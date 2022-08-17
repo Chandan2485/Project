@@ -19,8 +19,11 @@ const p_color = document.querySelector(".p_color")
 const task_list = document.querySelector(".task_list")
 
 done.addEventListener("click", addData)
+// done.style.overflow = 'hidden'
 function addData(e) {
     e.preventDefault()
+    // var final = document.querySelector(.task_list);
+    // if()
     if (task_color_arr[i] != undefined) {
         task_text_arr[i] = `${task_text.value}`
         i++
@@ -163,22 +166,25 @@ function lockUnlock(e) {
     }
     else if (e.target.id == "edit" || e.target.id == "Save") {
         if (e.target.id == "edit") {
-
             if (document.getElementById("Save")) {
+                document.getElementById("Save").style.color="black"
                 let edit_ones = document.getElementById("Save").parentElement.parentElement.previousElementSibling.lastElementChild
                 document.getElementById("Save").setAttribute("id", "edit")
                 edit_ones.setAttribute("contenteditable", "false")
+                
             }
             let rename = e.target.parentElement.parentElement.previousElementSibling.lastElementChild.innerText
             rename_index = task_text_arr.indexOf(rename)
             e.target.parentElement.parentElement.previousElementSibling.lastElementChild.setAttribute("contenteditable", "true")
             e.target.setAttribute("id", "Save")
+            e.target.style.color="white"
         }
         else {
             let rename = e.target.parentElement.parentElement.previousElementSibling.lastElementChild.innerText
             task_text_arr[rename_index] = rename
             e.target.parentElement.parentElement.previousElementSibling.lastElementChild.setAttribute("contenteditable", "false")
             e.target.setAttribute("id", "edit")
+            e.target.style.color="black"
         }
     }
     else if (e.target.id == "color") {
@@ -193,7 +199,6 @@ function lockUnlock(e) {
     }
 }
 // -------------------------------------------------------search---------
-
 const search_text=document.getElementById("search")
 const option_text=document.getElementById("option")
 const search_btn=document.querySelector(".search_btn")

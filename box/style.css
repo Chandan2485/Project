@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+button{
+    cursor: pointer;
+}
+.con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url(C:\Users\CHANDAN007\Desktop\Project\box\img\download.jpg); */
+    
+}
+.outerbox{
+    border: 1px solid black;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: blueviolet;
+}
+.innerbox{
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.close{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.hide{
+    visibility: hidden;
+}

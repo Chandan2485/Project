@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.con{
+    position: relative;
+    /* width: 100%; */
+   
+}
+.slide{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 300px;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.prv{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
+.prv{
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+}

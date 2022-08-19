@@ -52,17 +52,14 @@ function previousReview(){
     }
     reviews()
    
-    // console.log(count)
     
 }
 function nextReview(){
     count++
-    
     if (count>review.length-1 || count<0 ) {
         count=0
     }
     reviews()
-    // console.log(count)
 }
 
 function reviews(){

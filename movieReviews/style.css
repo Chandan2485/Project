@@ -11,6 +11,21 @@ header{
     align-items: center;
 }
 .sort{
-    border: 2px solid black;
+
     text-align: center;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.img img{
+    height: 250px;
+    width: 150px;
+}
+.movie{
+    border: 2px solid black;
+    margin: 19px;
 }

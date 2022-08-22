@@ -398,3 +398,73 @@ let allArray=[
    
 ]
 
+
+let main=document.querySelector("main")
+let sort=document.querySelector(".sort")
+
+allArray.forEach((el)=>{
+    main.innerHTML += `
+    <div class="movie">
+    <div class="img">
+        <img src="${el.img}" alt="">
+    </div>
+    <div class="movieName">
+        <h4>${el.name}</h4>
+    </div>
+    <div class="type_year">
+        <h4 class="type">${el.catagory}</h4>
+        <h4 class="year">${el.year}</h4>
+    </div>
+    <div class="rate">
+        <h4 class="imdi">${el.Rateing}</h4>
+    </div>
+</div>
+    `
+})
+
+sort.addEventListener("click",sortMovi)
+
+function sortMovi (e){
+    main.innerHTML=""
+    allArray.forEach((el)=>{
+    if(e.target.innerText==el.catagory){
+
+        main.innerHTML += `
+        <div class="movie">
+        <div class="img">
+            <img src="${el.img}" alt="">
+        </div>
+        <div class="movieName">
+            <h4>${el.name}</h4>
+        </div>
+        <div class="type_year">
+            <h4 class="type">${el.catagory}</h4>
+            <h4 class="year">${el.year}</h4>
+        </div>
+        <div class="rate">
+            <h4 class="imdi">${el.Rateing}</h4>
+        </div>
+    </div>
+        `
+    }
+    else if(e.target.innerText==el.year){
+            main.innerHTML += `
+            <div class="movie">
+            <div class="img">
+                <img src="${el.img}" alt="">
+            </div>
+            <div class="movieName">
+                <h4>${el.name}</h4>
+            </div>
+            <div class="type_year">
+                <h4 class="type">${el.catagory}</h4>
+                <h4 class="year">${el.year}</h4>
+            </div>
+            <div class="rate">
+                <h4 class="imdi">${el.Rateing}</h4>
+            </div>
+        </div>
+            `
+        }
+    })
+}

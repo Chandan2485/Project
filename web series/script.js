@@ -61,13 +61,22 @@
             }
 
             let result =`
-            <div class="show ">
+            <div class="showimg">
+                <div class="show">
                 <img src="${image}" alt="null">
 
                 <div>
-                <h3>${element.show.name}</h3>
-   
+                <h3 class="name">${element.show.name}</h3>
+                <h3>Lengauge: ${element.show.language}</h3>
+                <h3>Status: ${element.show.status}</h3>
+                <h3>Type: ${element.show.type}</h3>
+                <h3>Genres: ${element.show.genres[0]}</h3>
                 </div>
+                </div>
+                <h3>Summary:</h3>
+                <h3>${element.show.summary}</h3>
+                
+            
 
             </div>
         `

@@ -1,10 +1,9 @@
 const numbers = [...document.querySelectorAll('.number')];
 
-const Count = (el) => {
+const Count = (el) => { 
   const value = parseInt(el.dataset.value);
   const increment = Math.ceil(value / 1000);
   let initialValue = 0;
-
 
 
   const increaseCount = setInterval(() => {

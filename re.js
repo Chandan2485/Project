@@ -1,14 +1,12 @@
-let obj={
-    name:"hhjkkk",
-    age:"21"
+
+
+
+function clos(){
+    let n="netflix"
+  return  function (){
+        console.log(n)
+    }
 }
 
-
-// console.log(Object.entries(obj));
-
-function vby (num){
-    console.log(num);
-}
-vby("bhng")
-console.log(vby.arguments);
-// vby.arguments
+let x=clos()
+console.log(x)

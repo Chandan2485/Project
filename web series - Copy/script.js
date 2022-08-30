@@ -8,7 +8,7 @@
 
 
  btn1.addEventListener('click',function(){
-    showD.innerHTML = null
+    // showD.innerHTML = null
     container.innerHTML = null
     // 
     fetch(`https://api.tvmaze.com/search/shows?q=${cityInput.value}`)
@@ -29,7 +29,7 @@
                 <h3><span>Name:</span> ${element.show.name}</h3>
                 <h3><span>lengauge:</span> ${element.show.language}</h3>
                 <h3><span>Start Date:</span> ${element.show.premiered}</h3>
-                <a href="about.html" id="${element.score}">Show Details</a>
+                <a href="about.html" id="${element.show.id}">Show Details</a>
             </div>
         `
         container.innerHTML += result
@@ -40,11 +40,19 @@
  })
 
 
-//  container.addEventListener("click",show)
+ container.addEventListener("click",show)
 
-//  function show(e) {
+ function show(e) {
+localStorage.setItem("id",`${e.target.id}`)
+ }
 
-//     fetch(`https://api.tvmaze.com/search/shows?q=${cityInput.value}`)
+
+
+
+
+
+
+// fetch(`https://api.tvmaze.com/search/shows?q=${cityInput.value}`)
 //     .then(response=>response.json())//text --> json
 //     .then(data=>{
 
@@ -89,4 +97,3 @@
 
 
 //    }).catch(err=>alert("invalid city name"))
-//  }

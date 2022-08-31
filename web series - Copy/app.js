@@ -28,18 +28,27 @@ let id=localStorage.getItem("id")
                 </div>
                 <h3>Summary:</h3>
                 <h3>${data.summary}</h3>
-
-
-                
-                <div>
-                <img src="${image}" alt="null">
-   
-                </div>
-
-                
-            
-
             </div>
         `
-        showD.innerHTML += result
+        showD.innerHTML = result
+
+        let div=document.createElement("div")
+            div.setAttribute("class","img")
+            div.style.display="flex"
+            div.style.gap="10px"
+          // console.log( data._embedded.cast)  
+          data._embedded.cast.forEach(element => {
+            let img=`
+            <div>
+            <img src="${element.person.image.medium}" alt="null">
+            <h3 class="name">${element.person.name}</h3>
+            </div>
+            `
+            // console.log(element.person.image.medium)
+            // console.log(element.person.name)
+            div.innerHTML += img
+          }); 
+
+          showD.append(div)
+
    }).catch(err=>alert("invalid city name"))

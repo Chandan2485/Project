@@ -8,7 +8,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("C:/Users/CHANDAN 007/Desktop/Project/mathApp/img/Pokemon.jpg");
+    background-image: url("./img/Pokemon.jpg");
     background-size: cover;
     /* background-color: rgb(201, 201, 29); */
 }

@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(60, 60, 175);
+}
+header h2{
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+}
+.button{
+    margin: 1.5rem 0 1rem 2rem;
+}
+.button a{
+    margin-right: 1rem;
+    padding: 0.4rem 0.7rem;
+    background-color:rgb(60, 60, 175); 
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.Retrieve_tab,.Add_new_tab{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: 1px solid black;
+    height: 500px;
+}
+.Retrieve_tab h3,.Add_new_tab h3{
+ padding: 1rem 2rem;
+ display: inline-block;
+ border-bottom:1px solid black ;
+ border-right:1px solid black ;
+}
+.find_data{
+    margin: 2rem 0 2rem 2rem;
+}
+.findBtn{
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color:rgb(60, 60, 175);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.find_data input{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    margin-right: 1rem;
+}
+.matchFoundData{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+   width: 300px; 
+   height: 200px;
+   border: 1px solid black;
+   margin-left: 2rem;
+   padding-left: 1rem;
+}
+.matchFoundData div{
+    display: flex;
+}
+.matchFoundData div p{
+    width: 50%;
+}
+th,td{
+    border: 1px solid black;
+    
+}
+.add_Data_Table{
+    margin: 2rem;
+}
+table{
+    border-collapse: collapse;
+}
+th,td{
+    padding: 5px 10px;
+}
+#savebtn{
+    margin-right: 10px;
+}
+th{
+    background-color: rgb(113, 113, 204);
+    color: white;
+}
+td button{
+    background-color: white;
+    color: blue;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(226, 220, 220);
+}
+.addbtndiv{
+text-align: right;
+}
+.addbtn{
+    margin-right: 10rem;
+}
+.filledRow{
+    background-color: rgb(226, 220, 220);
+}

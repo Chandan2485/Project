@@ -9,43 +9,14 @@ let Retrievetab=document.querySelector('.Retrieve_tab')
 // let userData=JSON.parse(localStorage.getItem("userData"))
 let findbtn=document.querySelector('#findbtn')
 let matchData=document.querySelector('.matchData')
+let userData=JSON.parse(localStorage.getItem("userData"));
 
+(function (){
 
+    
+    if(userData != null){
 
-
-AddNewPersonbtn.addEventListener('click',()=>{
-    Retrievetab.setAttribute('id','hide')
-    Addnewtab.removeAttribute('id')
-})
-
-RetrieveInformationbtn.addEventListener('click',()=>{
-    Addnewtab.setAttribute('id','hide')
-    Retrievetab.removeAttribute('id')
-})
-
-// ==================================================================================
-function setDataBase(){
-    if(!localStorage.getItem("userData")){
-        let arr=[]
-        localStorage.setItem("userData",JSON.stringify(arr))
-    }
-}
-setDataBase()
-let userData=JSON.parse(localStorage.getItem("userData"))
-// ===========================================================================================
-function addRowTOtable(){
-    dataTable.innerHTML +=`
-    <tr>
-              <td><input type="text" id="name" /></td>
-              <td><input type="date" name="" id="dob" /></td>
-              <td><input type="number" name="" id="aadhar" /></td>
-              <td><input type="number" name="" id="mobile" /></td>
-              <td></td>
-              <td><button id="savebtn">Save</button><button id="deletebtn">Delete</button></td>
-            </tr> 
-    `
-}
-function showdata(){
+    
     dataTable.innerHTML=null
     userData.map((user)=>{
     dataTable.innerHTML +=`
@@ -59,8 +30,53 @@ function showdata(){
             </tr> 
     `
     })
+}else{
+    localStorage.setItem('userData',JSON.stringify([]))
 }
-showdata()
+})();
+
+
+AddNewPersonbtn.addEventListener('click',()=>{
+    Retrievetab.setAttribute('id','hide')
+    Addnewtab.removeAttribute('id')
+})
+
+RetrieveInformationbtn.addEventListener('click',()=>{
+    Addnewtab.setAttribute('id','hide')
+    Retrievetab.removeAttribute('id')
+})
+
+// ==================================================================================
+
+// ===========================================================================================
+function addRowTOtable(){
+    dataTable.innerHTML +=`
+    <tr>
+              <td><input type="text" id="name" /></td>
+              <td><input type="date" name="" id="dob" /></td>
+              <td><input type="number" name="" id="aadhar" /></td>
+              <td><input type="number" name="" id="mobile" /></td>
+              <td></td>
+              <td><button id="savebtn">Save</button><button id="deletebtn">Delete</button></td>
+            </tr> 
+    `
+}
+// function showdata(){
+//     dataTable.innerHTML=null
+//     userData.map((user)=>{
+//     dataTable.innerHTML +=`
+//     <tr class='filledRow'>
+//               <td><input type="text"  value=${user.Name} readonly /></td>
+//               <td><input type="date" name=""  value=${user.Date_of_Birth} readonly /></td>
+//               <td><input type="number" name=""  value=${user.Aadhar_Number} readonly /></td>
+//               <td><input type="number" name=""  value=${user.Mobile_Number} readonly /></td>
+//               <td>${user.Age}</td>
+//               <td><button id="savebtn">Save</button><button class="deletebtn" id="${user.Mobile_Number}">Delete</button></td>
+//             </tr> 
+//     `
+//     })
+// }
+// showdata()
 addRowTOtable()
 // ======================================================================================================
 addRow.addEventListener('click',onClickaddRowTOtable)
@@ -96,6 +112,9 @@ if(name.length>0 && dob.length>0 && aadhar.length==12 && mobile.length==10){
         'Mobile_Number':mobile,
         'Age':new Date().getFullYear() - new Date(`${dob}`).getFullYear()
     }
+   
+
+
    userData.push(newUser)
    localStorage.setItem("userData",JSON.stringify(userData))
    showdata()

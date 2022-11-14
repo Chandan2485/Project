@@ -67,7 +67,7 @@ function datafetch() {
                                 <p> <input type="text" value=${data.description} class='descrip'> </p>
                                 <p>${data.temp_in_celsius}</p>
                                 <p>${data.pressure_in_hPa}</p>
-                                <p>${data.temp_in_celsius}</p>
+                                <p>${Math.floor((Date.now()-new Date(data.date_and_time))/(1000*3600*24))}</p>
                             </div>
                         </div>
                     </div>
